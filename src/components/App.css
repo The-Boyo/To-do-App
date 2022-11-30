@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: absolute;
+  height: max-content;
+  min-height: 100%;
+  width: 100%;
+  background: rgb(46, 25, 95);
+}
+
+.header {
+  padding: .5em .5em 0;
+}
+
+.title {
+  margin-left: 1em;
+  color: rgb(142, 233, 202);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-shadow: -1.5px 1.5px 1px aqua;
+  text-transform: uppercase;
+  text-decoration: underline double black 1px;
+}

@@ -1,0 +1,95 @@
+
+
+.headers {
+  margin: .5em;
+  padding-left: 1em;
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 2fr;
+  border-bottom: 3px double;
+}
+
+.headers > h3 {
+  color: rgb(178, 192, 177);
+  font-family: cursive;
+}
+
+.todo {
+  align-self: end;
+}
+
+.item-cont {
+  display: grid;
+  margin: 1em .5em;
+  padding: .4em 0em .4em 1em;
+  display: grid;
+  grid-template-columns: 4fr 2fr 2fr 2fr;
+  align-items: center;
+  color: rgb(142, 233, 202);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  box-shadow: 1px 1px 3px;
+  font-size: 1.1em;
+  min-height: 40px;
+  border-radius: 10px;
+}
+
+.item-cont > li {
+  list-style-type: none;
+}
+
+.item-cont:hover {
+  box-shadow: 2px 2px 7px;
+  border: 1px solid;
+}
+
+.li-todo {
+  margin-right: .5em;
+}
+
+.li-todo, .li-deadline {
+  text-decoration: none;
+}
+
+.li-deadline, .li-completed, .li-delete {
+  padding-left: .5em;
+}
+
+.li-delete {
+  display: flex;
+}
+
+.fa-circle-xmark {
+  align-self: center;
+}
+
+.mark {
+  font-size: 12px;
+  margin-left: 10%;
+  justify-self: flex-end;
+  color: rgb(224, 121, 121);
+  display: none;
+}
+
+
+/* Small Screens */
+
+@media screen and (max-width: 600px) {
+  .headers > h3 {
+    font-size: 1em;
+  }
+
+  .item-cont {
+    font-size: 1em;
+  }
+}
+
+
+
+@media screen and (max-width: 368px) {
+  .headers > h3 {
+    font-size: .7em;
+  }
+
+  .item-cont {
+    font-size: .91em;
+  }
+}
