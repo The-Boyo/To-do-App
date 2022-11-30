@@ -16,9 +16,22 @@ const List = ({ todos, deleteTodo }) => {
            if (par.children[0].style.textDecoration === '') {
              par.children[0].style.textDecoration = 'line-through';
              par.children[1].style.textDecoration= 'line-through';
+             par.children[0].style.color= 'rgb(94, 206, 104)';
+             par.children[1].style.color= 'rgb(94, 206, 104)';
            } else {
             par.children[0].style.textDecoration = '';
             par.children[1].style.textDecoration= '';
+
+            if (par.children[1].innerHTML.length < 3) {
+             par.children[0].style.color= 'rgb(224, 121, 121)';
+             par.children[1].style.color= 'rgb(224, 121, 121)';
+            } else if (par.children[1].innerHTML === 'Date due') {
+              par.children[0].style.color= 'red';
+              par.children[1].style.color= 'red';
+            } else {
+              par.children[0].style.color= '';
+              par.children[1].style.color= '';
+            }
            } 
         }
       })
@@ -34,7 +47,7 @@ const List = ({ todos, deleteTodo }) => {
       }, 1500);
       return
     }
-  }
+  } 
 
   
   const setDeadline = date => {
