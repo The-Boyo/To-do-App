@@ -21,8 +21,10 @@ const Input = ({ getInput }) => {
     setDes('');
     setDate('');
     btnRef.current.style.backgroundColor = 'rgb(94, 211, 94)';
+    btnRef.current.innerHTML = 'Submitted';
     setTimeout(() => {
     btnRef.current.style.backgroundColor = '';
+    btnRef.current.innerHTML = 'Submit';
     }, 1000);
   }
 
