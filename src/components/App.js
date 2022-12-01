@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import Input from "./input/Input";
 import List from "./todos/List";
@@ -11,12 +11,18 @@ const App = () => {
 
   const getInput = (des, date) => {
     setData([...data, { des, date }]);
+    localStorage.setItem('todos', JSON.stringify([...data, { des, date }]));
   }
-
+  
   const deleteTodo = id => {
     const newData = data.filter(dats => dats.des !== id);
     setData(newData);
   }
+
+  
+  useEffect(()=> {
+    setData(JSON.parse(localStorage.getItem('todos')));
+  }, [])
 
 
   return (
