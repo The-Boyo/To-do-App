@@ -16,7 +16,9 @@ const App = () => {
   
   const deleteTodo = id => {
     const newData = data.filter(dats => dats.des !== id);
+    localStorage.removeItem('todos');
     setData(newData);
+    localStorage.setItem('todos', JSON.stringify(newData));
   }
 
   
