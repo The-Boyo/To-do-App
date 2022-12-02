@@ -18,9 +18,11 @@ const List = ({ todos, deleteTodo }) => {
              par.children[1].style.textDecoration= 'line-through';
              par.children[0].style.color= 'rgb(94, 206, 104)';
              par.children[1].style.color= 'rgb(94, 206, 104)';
+             par.lastChild.style.color = 'rgb(196, 48, 48)'
            } else {
             par.children[0].style.textDecoration = '';
             par.children[1].style.textDecoration= '';
+            par.lastChild.style.color = ''
 
             if (par.children[1].innerHTML.length < 3) {
              par.children[0].style.color= 'rgb(224, 121, 121)';
