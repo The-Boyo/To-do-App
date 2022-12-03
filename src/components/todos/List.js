@@ -1,9 +1,11 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import './List.css';
 
 
 const List = ({ todos, deleteTodo }) => {
+
+  const [timer, setTimer] = useState(new Date().getTime());
 
   const desRef = useRef();
   const dateRef = useRef();
@@ -51,15 +53,20 @@ const List = ({ todos, deleteTodo }) => {
     }
   } 
 
+  useEffect(()=> {
+    setInterval(() => {
+      setTimer(new Date().getTime());
+    })
+  }, [timer])
+
   
   const setDeadline = date => {
     const dt = new Date(date).getTime();
-    const now = new Date().getTime();
-    const diff =  dt - now;
+    const diff =  dt - timer;
     const days = Math.floor((diff % (1000*60*60*24*(365/12))) / (1000*60*60*24));
     const months = Math.floor((diff % (1000*60*60*24*365)) / (1000*60*60*24*(365/12)))
     const years = Math.floor(diff / (1000*60*60*24*365));
-    
+
     if(years > 0 && months > 0 && days > 0) {
       return `${years}y ${months}m ${days}d`;
     }
