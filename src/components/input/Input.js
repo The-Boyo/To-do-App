@@ -49,11 +49,22 @@ const Input = ({ getInput }) => {
   return (
     <div className="input">
       <form onSubmit={handleSubmit} className="input-container">
-        <label htmlFor="description" className="label-des" >Enter Todo :<input type="text" className="description" id="description" placeholder="todo..." value={capitalise(des)} onChange={onDesChange} required />
-        </label>
-        <label htmlFor="date" className="label-date">Enter Deadline Date :
+        
+        <div className="todo-cont">
+        <label htmlFor="description" className="label-des" >Enter Todo : </label>
+        
+        <input type="text" className="description" id="description" placeholder="todo..." value={capitalise(des)} onChange={onDesChange} required />
+
+        </div>
+        
+        <div className="date-cont">
+
+        <label htmlFor="date" className="label-date">Enter Deadline Date : </label>
+
         <input type="date" className="date" id="date" value={date} onChange={onDateChange} min={minDate} required />
-        </label>
+        
+        </div>
+        
         <button className="btn-submit" ref={btnRef} >Submit</button>
       </form>
     </div>
