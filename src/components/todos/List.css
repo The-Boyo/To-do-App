@@ -40,11 +40,13 @@
 }
 
 .li-todo {
-  margin-right: .5em;
+  margin-right: 1em;
 }
 
 .li-todo, .li-deadline {
   text-decoration: none;
+  word-spacing: 3px;
+  line-height: 1.5em;
 }
 
 .li-deadline, .li-completed, .li-delete {
