@@ -48,7 +48,7 @@ const List = ({ todos, deleteTodo }) => {
       e.target.parentElement.children[1].style.display = 'block';
       setTimeout(()=> {
       e.target.parentElement.children[1].style.display = 'none';
-      }, 1500);
+      }, 500);
       return
     }
   } 
