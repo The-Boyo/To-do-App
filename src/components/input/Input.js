@@ -67,6 +67,10 @@ const Input = ({ getInput }) => {
         
         <button className="btn-submit" ref={btnRef} >Submit</button>
       </form>
+
+      <div className="icon-cont">
+      <a target="_blank" href="https://icons8.com/icon/cjGKAQLQz2TV/calendar" rel="noreferrer">Calendar</a> icon by <a target="_blank" href="https://icons8.com" rel="noreferrer" >Icons8</a>
+      </div>
     </div>
   )
 }

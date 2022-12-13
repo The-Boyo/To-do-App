@@ -2,7 +2,7 @@
   position: relative;
   top: 2em;
   margin-top: 1em;
-  padding: 2em 2em 3em 2em;
+  padding: 2em;
   box-shadow: 1px 1px 2px black;
 }
 
@@ -69,6 +69,17 @@
   cursor: pointer;
 }
 
+.icon-cont {
+  margin: .5em 0;
+  font-style: oblique;
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 153, 151);
+}
+
+.icon-cont > a {
+  color: rgb(84, 197, 197);
+  text-decoration: underline;
+}
 
 /* Small Screens */
 
