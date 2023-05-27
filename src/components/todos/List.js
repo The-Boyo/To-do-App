@@ -133,7 +133,7 @@ const List = ({ todos, deleteTodo }) => {
         <h3 className="todo">Todo</h3>
         <h3 className="deadline">Deadline</h3>
         <h3 className="completed">Completed</h3>
-        <h3 className="delete">Delete</h3>
+        <h3 className="delete">Remove</h3>
       </div>
       <ul className="items">
         {renderItem()}

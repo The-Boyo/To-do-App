@@ -23,9 +23,9 @@ const App = () => {
 
   
   useEffect(()=> {
-    if(localStorage.length > 0){
+    if(!localStorage.todos) return
+    
       setData(JSON.parse(localStorage.getItem('todos')));
-    }
   }, [])
 
 
